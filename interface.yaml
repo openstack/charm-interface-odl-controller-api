@@ -1,0 +1,3 @@
+name: odl-controller-api
+summary: Interface for intergrating with an OpenDayLight Controller RESTful API
+maintainer: James Page <james.page@ubuntu.com>
