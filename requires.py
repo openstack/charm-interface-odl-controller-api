@@ -12,14 +12,14 @@ class ControllerAPIRequires(RelationBase):
     def changed(self):
         self.set_state('{relation_name}.connected')
         if self.connection():
-            self.set_state('{relation_name}.access.available')
+            self.set_state('{relation_name}.available')
         else:
-            self.remove_state('{relation_name}.access.available')
+            self.remove_state('{relation_name}.available')
 
     @hook('{requires:odl-controller-api}-relation-broken')
     def broken(self):
         self.remove_state('{relation_name}.connected')
-        self.remove_state('{relation_name}.access.available')
+        self.remove_state('{relation_name}.available')
 
     def connection(self):
         """OpenDayLight Controller Access Details
